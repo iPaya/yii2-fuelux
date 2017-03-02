@@ -1,0 +1,35 @@
+{
+    "name": "ipaya/yii2-fuelux",
+    "description": "The Fuel UX extension for Yii2.",
+    "homepage": "https://github.com/iPaya/yii2-fuelux",
+    "type": "yii2-extension",
+    "keywords": [
+        "yii2",
+        "extension",
+        "Fuel UX"
+    ],
+    "authors": [
+        {
+            "name": "Di Zhang",
+            "email": "zhangdi_me@163.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "yiisoft/yii2": "*",
+        "yiisoft/yii2-bootstrap": "*",
+        "bower-asset/fuelux": "3.13.*",
+        "ipaya/yii2-moment": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "iPaya\\fuelUX\\": "src"
+        }
+    },
+    "extra": {
+        "asset-installer-paths": {
+            "npm-asset-library": "vendor/npm",
+            "bower-asset-library": "vendor/bower"
+        }
+    }
+}
