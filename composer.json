@@ -21,6 +21,9 @@
         "bower-asset/fuelux": "3.13.*",
         "ipaya/yii2-moment": "*"
     },
+    "require-dev": {
+        "phpunit/phpunit": ">4.8.20 <6.0"
+    },
     "autoload": {
         "psr-4": {
             "iPaya\\fuelUX\\": "src"
