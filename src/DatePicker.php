@@ -22,7 +22,11 @@ class DatePicker extends InputWidget
     public function run()
     {
         $this->registerPlugin('datepicker');
-        $input = Html::activeTextInput($this->model, $this->attribute, $this->options);
+        if ($this->model) {
+            $input = Html::activeTextInput($this->model, $this->attribute, $this->options);
+        } else {
+            $input = Html::textInput($this->name, $this->value, $this->options);
+        }
 
         return $this->render('date-picker', [
             'id' => $this->getId(),
