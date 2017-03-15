@@ -35,7 +35,12 @@ class ComboBox extends InputWidget
     public function run()
     {
         $this->registerPlugin('combobox');
-        $input = Html::activeTextInput($this->model, $this->attribute, $this->options);
+        if ($this->model) {
+            $input = Html::activeTextInput($this->model, $this->attribute, $this->options);
+        } else {
+            $input = Html::textInput($this->name, $this->value, $this->options);
+        }
+
         $items = $this->normalizeItems($this->items);
 
         return $this->render('combo-box', [
